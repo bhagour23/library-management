@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+   <!-- Navigation Bar -->
+   <nav class="navbar">
+    <div class="logo">📚 Library</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="search-bar">
+        <input
+      type="text"
+      id="searchInput"
+      placeholder="Search by Title or Author..."
+     
+    />
+        <button type="button" onclick="handleSearch()">Search</button>
+    </div>
+    <div class="sort-container">
+        <label for="sortSelect">Sort By:</label>
+        <select id="sortSelect" onchange="handleSortChange(this.value)">
+          <option value="title" selected>Title (A-Z)</option>
+          <option value="date">Date of Release</option>
+        </select>
+      </div>
+</nav>
+
+<!-- Book Card -->
+<div class="card-container" id="main-container">
+    <!-- Cards will be dynamically added here -->
+    <div class="card">
+        <img src="book.jpg" alt="Book Thumbnail" width="100%">
+        <h3>The Great Gatsby</h3>
+        <p>Author: F. Scott Fitzgerald</p>
+        <p>Publisher: Scribner</p>
+        <p>Publish Date: April 10, 1925</p>
+        <button>View Details</button>
+    </div>
+    <!-- Add more cards dynamically with JS -->
+</div>
+
+  <!-- Pagination Controls -->
+  <div class="pagination">
+    <button id="prevBtn" onclick="prevPage()">Previous</button>
+    <span id="pageIndicator">Page 1 of 1</span>
+    <button id="nextBtn" onclick="nextPage()">Next</button>
+  </div>
+     
+    <script src="script.js"></script>
+</body>
+</html>
